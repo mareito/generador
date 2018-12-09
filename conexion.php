@@ -1,5 +1,15 @@
 <br>
 <br>
+<?php
+$conexion = 0;
+$validado = 0;
+if (isset($_GET['con'])) {
+    $conexion == intval($_GET['con']);
+}
+if (isset($_GET['val'])) {
+    $validado == intval($_GET['val']);
+}
+?>
 <div class="row">
     <div class="col"></div>
     <div class="col">
@@ -24,13 +34,27 @@
                     <div class="form-group">
                         <label for="clave">Clave</label>
                         <input type="password" class="form-control" name="clave" id="clave" placeholder="clave">
-                    </div>                              
-                    <input type="submit" value="Probar" class="btn btn-primary">
+                    </div>                                            
+                    <input type="hidden" class="form-control" name="conexion" id=conexion value="<?php echo $conexion ?>">
+                    <input type="submit" value="Guardar" class="btn btn-primary">
                 </form>
             </div>
         </div>
-        <div id="resultado"></div>
+        <div id="resultado">
+            <?php
+            if ($validado > 0) {
+                if ($conexion > 0) {
+                    echo '<span>Conexion Realizada Correctamente</span>';
+                } else {
+                    echo '<span>Conexion no se pudo realizar</span>';
+                }
+            }
+            ?>
+        </div>
     </div>
     <div class="col"></div>
 </div>
+<script>
+
+</script>
 
