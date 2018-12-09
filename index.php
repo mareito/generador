@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -15,15 +18,32 @@
             <?php
             include './menu.php';
             ?>
-            <div class="container">         
+            <div class="container-fluid">         
                 <?php
                 $opc = 0;
                 if (isset($_GET['opc'])) {
                     $opc = intval($_GET['opc']);
                 }
+                if (!isset($_SESSION['servidor']) && !isset($_SESSION['base']) &&
+                        !isset($_SESSION['usuario']) && !isset($_SESSION['clave'])) {
+                    $opc = 0;
+                    echo "<script>"
+                    . "localStorage.removeItem('servidor');"
+                    . "localStorage.removeItem('base');"
+                    . "localStorage.removeItem('usuario');"
+                    . "localStorage.removeItem('clave');"
+                    . "</script>";
+                }
                 switch ($opc) {
                     case 1:
                         include './conexion.php';
+                        break;
+                    case 2:
+                        include './tabla.php';
+                        break;
+                    default :
+                        include './conexion.php';
+                        break;
                 }
                 ?>
             </div>

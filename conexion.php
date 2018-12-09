@@ -54,7 +54,4 @@ if (isset($_GET['val'])) {
     </div>
     <div class="col"></div>
 </div>
-<script>
-
-</script>
 

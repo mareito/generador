@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $servidor = "";
 $usuario = "";
 $clave = "";
@@ -31,6 +31,10 @@ if (isset($_POST['servidor']) && isset($_POST['usuario']) && isset($_POST['base'
         . "window.alert('Conexion correcta');"
         . "window.location.replace('index.php?opc=1&con=1&val=1');"
         . "</script>";
+        $_SESSION['servidor'] = $servidor;
+        $_SESSION['base'] = $base;
+        $_SESSION['usuario'] = $usuario;
+        $_SESSION['clave'] = $clave;
     } catch (PDOException $e) {
         echo "<script>window.alert('Error en la Conexion : $e->getMessage()');window.location.replace('index.php?opc=1&con=0&val=1')</script>";
     }
