@@ -41,6 +41,12 @@ session_start();
                     case 2:
                         include './tabla.php';
                         break;
+                    case 3:
+                        include './ObjConexion.php';
+                        break;
+                     case 4:
+                        include './ObjPhp.php';
+                        break;
                     default :
                         include './conexion.php';
                         break;

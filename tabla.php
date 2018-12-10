@@ -32,8 +32,7 @@ if (isset($_GET['tabla'])) {
         <?php
         $conn = "";
         include './bd.php';
-        $sql = "SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE table_schema = '" . $_SESSION['base'] . "' ORDER BY table_name ";
-        //$sql = "select * from tipoproceso ";
+        $sql = "SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE table_schema = '" . $_SESSION['base'] . "' ORDER BY table_name ";       
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);

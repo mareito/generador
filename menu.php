@@ -12,10 +12,10 @@
                 <a class="nav-link" href="index.php?opc=2">Tabla<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="index.php?opc=2">Objeto Conn<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.php?opc=3">Objeto Conn<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="index.php?opc=2">Objeto Resp<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.php?opc=4">Objeto PHP<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="index.php?opc=3">Conector BD<span class="sr-only">(current)</span></a>
@@ -41,20 +41,17 @@
         </ul>
     </div>
 </nav>
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><span id="servidor"></span></li>
-        <li class="breadcrumb-item active" aria-current="page"><span id="base"></span></li>
-    </ol>
-</nav>
 <?php
-echo "<script>";
-echo "if(localStorage.getItem('servidor')){";
-echo "  document.getElementById('servidor').innerHTML = localStorage.getItem('servidor') ";
-echo "}";
-echo "if(localStorage.getItem('base')){";
-echo "  document.getElementById('base').innerHTML = localStorage.getItem('base') ";
-echo "}";
-echo '</script>'
+if (isset($_SESSION['servidor']) && isset($_SESSION['base'])) {
+    echo '<nav aria-label="breadcrumb">';
+    echo '    <ol class="breadcrumb">';
+    echo '        <li class="breadcrumb-item">' . $_SESSION['servidor'] . '</li>';
+    echo '        <li class="breadcrumb-item">' . $_SESSION['base'] . '</li>';
+    if (isset($_SESSION['tabla'])) {
+        echo '        <li class="breadcrumb-item">' . $_SESSION['tabla'] . '</li>';
+    }
+    echo '    </ol>';
+    echo '</nav>';
+}
 ?>
 
