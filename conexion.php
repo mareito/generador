@@ -34,7 +34,11 @@ if (isset($_GET['val'])) {
                     <div class="form-group">
                         <label for="clave">Clave</label>
                         <input type="password" class="form-control" name="clave" id="clave" placeholder="clave">
-                    </div>                                            
+                    </div>  
+                     <div class="form-group">
+                        <label for="clave">Carpeta Clases DB</label>
+                        <input type="text" class="form-control" name="clases" id="clases" placeholder="Carpeta clases DB">
+                    </div>  
                     <input type="hidden" class="form-control" name="conexion" id=conexion value="<?php echo $conexion ?>">
                     <input type="submit" value="Guardar" class="btn btn-primary">
                 </form>

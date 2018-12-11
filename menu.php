@@ -16,12 +16,9 @@
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="index.php?opc=4">Objeto PHP<span class="sr-only">(current)</span></a>
-            </li>
+            </li>         
             <li class="nav-item active">
-                <a class="nav-link" href="index.php?opc=3">Conector BD<span class="sr-only">(current)</span></a>
-            </li>  
-            <li class="nav-item active">
-                <a class="nav-link" href="index.php?opc=2">Servicio PHP<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.php?opc=5">Servicio PHP<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="index.php?opc=2">Template Angular<span class="sr-only">(current)</span></a>

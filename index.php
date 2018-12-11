@@ -47,6 +47,9 @@ session_start();
                      case 4:
                         include './ObjPhp.php';
                         break;
+                     case 5:
+                        include './SerPhp.php';
+                        break;
                     default :
                         include './conexion.php';
                         break;

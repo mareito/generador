@@ -39,7 +39,7 @@
                             echo '<br>';
 
 
-                            echo '    function consulta' . $nombreClase . '($consulta) {<br>';
+                            echo '    function consulta' . $nombreClase . '($consulta,$totreg, $regini) {<br>';
                             echo '        try {<br>';
                             echo '            $idx2 = strlen($consulta);<br>';
                             echo '            if ($idx2 === 0) {<br>';
@@ -66,7 +66,13 @@
                                     $cont++;
                                 }
                             }
-                            echo ' ";';
+                            echo ' ";<br>';
+                            echo '            if ($totreg > 0) {<br>';
+                            echo '                $query .= " LIMIT $totreg ";<br>';
+                            echo '            }<br>';
+                            echo '            if ($regini > 0) {<br>';
+                            echo '                $query .= " OFFSET $regini ";<br>';
+                            echo '            }';
                             echo '<br>';
                             echo '            $this->sql = $query;<br>';
                             echo '            $consPrep = $this->conn->prepare($query);<br>';
