@@ -21,6 +21,9 @@
                 <a class="nav-link" href="index.php?opc=5">Servicio PHP<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
+                <a class="nav-link" href="index.php?opc=6">Clase Angular<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
                 <a class="nav-link" href="index.php?opc=2">Template Angular<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
@@ -28,10 +31,7 @@
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="index.php?opc=2">Servicio Angular<span class="sr-only">(current)</span></a>
-            </li>  
-            <li class="nav-item active">
-                <a class="nav-link" href="index.php?opc=2">Clase Angular<span class="sr-only">(current)</span></a>
-            </li>
+            </li>              
             <li class="nav-item active">
                 <a class="nav-link" href="index.php?opc=2">Pipe Angular<span class="sr-only">(current)</span></a>
             </li>

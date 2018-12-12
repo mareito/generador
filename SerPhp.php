@@ -71,6 +71,7 @@
                             echo '        }<br>';
                             echo '<br>';
                             echo '        if ($accion === \'GR\') {<br>';
+                            echo validaReferencias($conn, $_SESSION['base'], $_SESSION['tabla'], $nombreClase);
                             echo '            $hora = time();<br>';
                             echo '            $db->beginTransaction();<br>';
                             echo '            $transaccion = \'S\';<br>';
@@ -119,7 +120,6 @@
                             echo '    $respuesta->setMensaje("Error->" . $ex->getMessage());<br>';
                             echo '    echo $respuesta->getRespuesta();<br>';
                             echo '}<br>';
-                            
                         } else {
                             echo '<div class="alert alert-danger" role="alert">';
                             echo 'La Tabla no tiene llave primaria';

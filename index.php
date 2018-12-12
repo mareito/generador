@@ -50,6 +50,9 @@ session_start();
                      case 5:
                         include './SerPhp.php';
                         break;
+                    case 6:
+                        include './ClaAngular.php';
+                        break;
                     default :
                         include './conexion.php';
                         break;
