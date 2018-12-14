@@ -53,6 +53,12 @@ session_start();
                     case 6:
                         include './ClaAngular.php';
                         break;
+                     case 7:
+                        include './ComAngular.php';
+                        break;
+                    case 8:
+                        include './TempAngular.php';
+                        break;
                     default :
                         include './conexion.php';
                         break;

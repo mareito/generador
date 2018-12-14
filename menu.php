@@ -24,10 +24,10 @@
                 <a class="nav-link" href="index.php?opc=6">Clase Angular<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="index.php?opc=2">Template Angular<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.php?opc=7">Componente Angular<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="index.php?opc=2">Componente Angular<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.php?opc=8">Template HTML Angular<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="index.php?opc=2">Servicio Angular<span class="sr-only">(current)</span></a>
